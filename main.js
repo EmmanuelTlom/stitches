@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   new Splide("#splide", {
     type: "loop",
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     pagination: false,
-    interval: 3000,
+    interval: 2000,
   }).mount();
 });
 document.addEventListener("DOMContentLoaded", function () {
   new Splide("#splide2", {
     type: "loop",
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     pagination: false,
-    interval: 3000,
+    interval: 2000,
   }).mount();
 });
 document.addEventListener("DOMContentLoaded", function () {
   new Splide("#splide3", {
-    autoplay: false,
+    autoplay: true,
     rewind: true,
     perPage: 3,
     pagination: false,

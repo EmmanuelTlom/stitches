@@ -209,28 +209,29 @@ section {
 .hero .grid .texts {
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .hero .grid .texts h4 {
-  font-size: 45px;
+  font-size: 55px;
   font-weight: 700;
   line-height: 58px;
+  text-transform: uppercase;
   text-align: center;
   color: white;
   margin-bottom: 0.4rem;
 }
 .hero .grid .texts a {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 58px;
   text-align: left;
   text-transform: uppercase;
   color: white;
   border: 2px solid #ffffff;
-  margin-top: 0.5rem;
-  padding: 1rem 3rem;
+  margin-top: 1rem;
+  padding: 1.5rem 3rem;
 }
 .hero .contain {
   /* max-width: 80%; */
@@ -264,6 +265,9 @@ section {
   margin-right: 0rem;
   font-size: 1rem;
   color: white;
+}
+.down_hero_section img {
+  width: 30px;
 }
 .down_hero_section div {
   border-right: 1px solid #888888;
@@ -302,7 +306,8 @@ section {
   font-weight: 700;
 }
 
-.head.section a {
+.head.section a,
+.head.section span {
   color: #b6b5b2;
 }
 .categories {
@@ -381,8 +386,9 @@ section {
 
 .endorsed img {
   width: 150px;
-  opacity: 0.5;
-  height: 50px;
+  /* opacity: 0.5; */
+  filter: grayscale(100%);
+  /* height: 50px; */
   object-fit: contain;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
@@ -392,7 +398,7 @@ section {
 }
 
 .endorsed img:hover {
-  opacity: 1;
+  filter: grayscale(0%);
   transform: scale(1.1);
 }
 .brands img {
@@ -473,12 +479,45 @@ section {
 }
 
 .reliable {
-  background: url("images/reliablebg.svg") rgba(255, 255, 255, 0.949);
+  background: rgba(255, 255, 255, 0.949);
+  /* background: url("images/reliablebg.svg") rgba(255, 255, 255, 0.949); */
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
   padding: 4rem 0;
   background-position: center;
+  position: relative;
+}
+
+.reliable .backgrondTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  position: absolute;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+}
+
+.reliable .backgrondTexts h1 {
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #f8f8f8;
+  margin: 1rem 0;
+}
+
+.reliable .read_more {
+  color: #000000 !important;
+}
+.reliable .flex,
+.reliable .head.section p,
+.reliable .head.section h2 {
+  position: relative;
+  z-index: 20;
 }
 .ready {
   padding: 1rem;
@@ -501,11 +540,16 @@ section {
   color: white;
   font-weight: 700;
 }
-
+.endorsed .container .responsive_grid div:nth-child(3) img {
+  height: 50px;
+}
 @media (min-width: 1300px) {
   .down_hero_section p {
     font-size: 12px;
     line-height: 15.4px;
+  }
+  .reliable {
+    padding: 10rem 0;
   }
 }
 @media (max-width: 1050px) {
@@ -517,7 +561,9 @@ section {
     /* height: 600px; */
     object-fit: cover;
   }
-
+  .down_hero_section img {
+    width: 20px;
+  }
   /* .hero .grid img {
     max-height: 400px;
   } */
@@ -573,11 +619,19 @@ section {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .hero .contain {
+  /* .hero .contain {
     max-width: 90%;
     margin: 0 auto;
+  } */
+  .reliable .backgrondTexts h1 {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: -0.05em;
   }
-
+  .down_hero_section div {
+    gap: 0.5rem;
+  }
   .grid {
     grid-template-columns: 1fr;
   }
@@ -625,8 +679,10 @@ section {
   .down_hero_section div {
     border-bottom: 1px solid #888888;
     width: 100%;
+    border-right: none;
     text-align: center;
     justify-content: center;
+    padding: 1rem;
     padding-inline: 0;
   }
   .down_hero_section div:last-child {
@@ -647,8 +703,14 @@ section {
     height: 60px;
   }
 
+  .review .splide__track {
+    padding: 1rem 0;
+  }
+  .hero .grid .texts a {
+    padding: 0.5rem 2rem;
+  }
   .categories .responsive_grid {
-    margin-top: 4rem;
+    margin-top: 2rem;
     gap: 1rem 0.4rem;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   }
@@ -656,12 +718,12 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     gap: 0.5rem;
   }
-  .endorsed .container .responsive_grid img {
-    width: 70px;
-    height: 50px;
-  }
+
   .categories .responsive_grid p {
     font-size: 7px;
+  }
+  .endorsed {
+    padding: 4rem 0;
   }
 
   .ready {
