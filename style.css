@@ -410,9 +410,9 @@ section {
   height: 100%;
   background: rgba(255, 255, 255, 0.949);
 }
-.review .splide__list {
+/* .review .splide__list {
   padding: 0 2rem !important;
-}
+} */
 
 .review .splide__slide {
   opacity: 0.2;

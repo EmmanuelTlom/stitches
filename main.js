@@ -18,11 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   new Splide("#splide3", {
-    autoplay: true,
+    autoplay: false,
     rewind: true,
     perPage: 3,
     pagination: false,
-    perMove: 1,
     gap: 20,
     arrows: true,
     breakpoints: {
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         perPage: 3,
       },
       768: {
-        perPage: 1,
+        perPage: 2,
       },
       480: {
         perPage: 1,
