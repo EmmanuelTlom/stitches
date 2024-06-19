@@ -246,8 +246,8 @@ section {
   justify-content: space-between;
   gap: 0.5rem;
 }
-.down_hero_section div {
-  padding: 0.6rem;
+.down_hero_section .container div {
+  padding: 1.2rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -259,6 +259,7 @@ section {
   font-weight: 500;
   line-height: 22.4px;
   text-align: left;
+  white-space: nowrap;
 }
 
 .down_hero_section i {
@@ -269,14 +270,14 @@ section {
 .down_hero_section img {
   width: 30px;
 }
-.down_hero_section div {
+.down_hero_section .container div {
   border-right: 1px solid #888888;
   width: 100%;
   text-align: center;
   justify-content: center;
-  padding-inline: 0;
+  padding-inline: 1rem;
 }
-.down_hero_section div:last-child {
+.down_hero_section .container div:last-child {
   border-right: none;
 }
 .head.section h2 {
@@ -309,6 +310,12 @@ section {
 .head.section a,
 .head.section span {
   color: #b6b5b2;
+  transition: all 0.5s ease-in-out;
+}
+.head.section a:hover,
+.head.section span:hover {
+  color: #000;
+  font-weight: 700;
 }
 .categories {
   padding: 1rem 0;
@@ -395,6 +402,7 @@ section {
 }
 .endorsed .responsive_grid > div {
   position: relative;
+  text-align: center;
 }
 
 .endorsed img:hover {
@@ -479,14 +487,15 @@ section {
 }
 
 .reliable {
-  background: rgba(255, 255, 255, 0.949);
-  /* background: url("images/reliablebg.svg") rgba(255, 255, 255, 0.949); */
+  /* background: rgba(255, 255, 255, 0.949); */
+  background: url("images/reliablebg.svg") rgba(255, 255, 255, 0.949);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
   padding: 4rem 0;
   background-position: center;
   position: relative;
+  overflow: hidden;
 }
 
 .reliable .backgrondTexts {
@@ -498,12 +507,15 @@ section {
   height: 100%;
   z-index: 10;
   top: 0;
+  overflow: hidden;
+  display: none;
 }
 
 .reliable .backgrondTexts h1 {
-  font-size: 90px;
-  font-weight: 400;
+  font-size: 98px;
+  font-weight: 500;
   line-height: 58px;
+  white-space: nowrap;
   letter-spacing: -0.05em;
   text-align: center;
   color: #f8f8f8;
@@ -552,7 +564,15 @@ section {
     padding: 10rem 0;
   }
 }
-@media (max-width: 1050px) {
+@media (min-width: 1000px) {
+  .endorsed img {
+    width: 200px;
+  }
+  .endorsed .responsive_grid div:nth-child(2) img {
+    width: 250px;
+  }
+}
+@media (max-width: 1070px) {
   /* .hero .container {
     max-width: 800px;
   } */
@@ -563,6 +583,9 @@ section {
   }
   .down_hero_section img {
     width: 20px;
+  }
+  .reliable .backgrondTexts h1 {
+    font-size: 80px;
   }
   /* .hero .grid img {
     max-height: 400px;
@@ -623,10 +646,17 @@ section {
     max-width: 90%;
     margin: 0 auto;
   } */
+  .reliable {
+    background: rgba(255, 255, 255, 0.949);
+  }
+  .reliable .backgrondTexts {
+    display: flex;
+  }
   .reliable .backgrondTexts h1 {
-    font-size: 44px;
-    font-weight: 400;
-    line-height: 34px;
+    font-size: 50px;
+    line-height: 44px;
+    white-space: normal;
+
     letter-spacing: -0.05em;
   }
   .down_hero_section div {
@@ -676,16 +706,16 @@ section {
   .hero .container {
     width: 100%;
   }
-  .down_hero_section div {
+  .down_hero_section .container div {
     border-bottom: 1px solid #888888;
     width: 100%;
     border-right: none;
     text-align: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1rem 0;
     padding-inline: 0;
   }
-  .down_hero_section div:last-child {
+  .down_hero_section .container div:last-child {
     border-bottom: none;
   }
 
