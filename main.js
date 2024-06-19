@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: false,
     perMove: 1,
     gap: 20,
-    arrows: true,
+    arrows: false,
     breakpoints: {
       1200: {
         perPage: 6,

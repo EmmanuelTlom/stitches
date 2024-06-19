@@ -127,11 +127,13 @@ section {
   background: #f2f0f3;
   /* height: 100vh; */
   padding-bottom: 0;
+  padding-top: 0rem;
   margin-top: 0;
 }
 .hero .grid img {
   /* max-height: 620px; */
-  height: 100%;
+  height: 700px;
+  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -212,11 +214,12 @@ section {
   transform: translate(-50%, -50%);
 }
 .hero .grid .texts h4 {
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 700;
   line-height: 58px;
   text-align: center;
   color: white;
+  margin-bottom: 0.4rem;
 }
 .hero .grid .texts a {
   font-size: 12px;
@@ -228,6 +231,10 @@ section {
   border: 2px solid #ffffff;
   margin-top: 0.5rem;
   padding: 1rem 3rem;
+}
+.hero .contain {
+  /* max-width: 80%; */
+  margin: 0 auto;
 }
 .down_hero_section {
   background: #606060;
@@ -247,7 +254,7 @@ section {
 
 .down_hero_section p {
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   line-height: 22.4px;
   text-align: left;
@@ -299,7 +306,7 @@ section {
   color: #b6b5b2;
 }
 .categories {
-  padding: 2rem 0;
+  padding: 1rem 0;
   padding-bottom: 1rem;
 }
 .categories .responsive_grid {
@@ -415,9 +422,11 @@ section {
 } */
 
 .review .splide__slide {
-  opacity: 0.2;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
-.review .splide__slide.is-visible.is-active {
+.review .splide__slide:hover {
   opacity: 1;
 }
 .review .container {
@@ -490,10 +499,21 @@ section {
   color: white;
 }
 
+@media (min-width: 1300px) {
+  .down_hero_section p {
+    font-size: 12px;
+    line-height: 15.4px;
+  }
+}
 @media (max-width: 1050px) {
   /* .hero .container {
     max-width: 800px;
   } */
+  .hero .grid img {
+    height: 100%;
+    /* height: 600px; */
+    object-fit: cover;
+  }
 
   /* .hero .grid img {
     max-height: 400px;
@@ -509,7 +529,7 @@ section {
   }
 
   .down_hero_section p {
-    font-size: 9px;
+    font-size: 8px;
     line-height: 15.4px;
   }
   .down_hero_section div {
@@ -549,6 +569,10 @@ section {
   .down_hero_section .container {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .hero .contain {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .grid {
