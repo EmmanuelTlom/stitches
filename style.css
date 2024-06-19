@@ -429,7 +429,7 @@ section {
   text-align: center;
   padding: 3rem 1rem;
   border-radius: 10px;
-  max-width: 350px;
+  max-width: 320px;
   margin: 0 auto;
 }
 .review .container .texts p {
@@ -623,10 +623,10 @@ section {
   .categories .responsive_grid {
     margin-top: 4rem;
     gap: 1rem 0.4rem;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   }
   .endorsed .container .responsive_grid {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     gap: 0.5rem;
   }
   .endorsed .container .responsive_grid img {
@@ -640,5 +640,14 @@ section {
   .ready {
     padding: 1rem;
     padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .categories .responsive_grid {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+  .endorsed .container .responsive_grid {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   }
 }
