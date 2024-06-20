@@ -712,7 +712,7 @@ section {
     border-right: none;
     text-align: center;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     padding-inline: 0;
   }
   .down_hero_section .container div:last-child {
@@ -727,7 +727,7 @@ section {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .categories .responsive_grid div {
     max-width: 60px;
     height: 60px;
@@ -759,6 +759,15 @@ section {
   .ready {
     padding: 1rem;
     padding-bottom: 3rem;
+  }
+  .down_hero_section .container {
+    gap: 0;
+  }
+  .hero .grid img {
+    height: 40vh;
+  }
+  .hero .grid .texts h4 {
+    font-size: 38px;
   }
 }
 
